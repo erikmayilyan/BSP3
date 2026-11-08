@@ -9,7 +9,7 @@ function App() {
     if (!message.trim()) return;
     const text = message.trim();
     setMessages((prev) => [...prev, {
-      text,
+      text : message,
       sender: "user"
     }]);
     setMessage("");
@@ -21,6 +21,9 @@ function App() {
         },
         body: JSON.stringify({ message: text }),
       });
+      if (!response.ok) {
+        throw new Error("Request Failed!");
+      };
       const data = await response.json();
       setMessages((prev) => [...prev, { text: data.response, sender: "assistant" }]);
     } catch {
@@ -42,7 +45,7 @@ function App() {
             </p>
           )}
           {messages.map((msg, index) => (
-            <div key={index} className="message">
+            <div key={index} className={`message ${msg.sender}`}>
               {msg.text}
             </div>
           ))}
