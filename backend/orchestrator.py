@@ -7,4 +7,3 @@ def process_request(user_request: str) -> str:
     return "Your request was rejected for safety reasons."
 
   return f"Received your request: {user_request}"
-  
