@@ -11,11 +11,3 @@ def check_prompt(user_request: str) -> tuple[bool, str]:
     return False, "The prompt was classified as unsafe by the ML model."
 
   return True, "The prompt was classified as safe by the ML model."
-
-  request = user_request.lower()
-
-  for phrase in blocked_phrases:
-    if phrase in request:
-      return False
-
-  return True
