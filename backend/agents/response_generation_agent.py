@@ -1,5 +1,6 @@
-def generate_response(user_request: str, analysis: str) -> str:
-  if "Erasmus" in analysis:
+def generate_response(user_request: str, analysis: dict) -> str:
+  categories = analysis["categories"]
+  if "mobility" in categories:
     return (
       "To apply for the Erasmus programme, start by checking "
       "your university's eligibility requirements, available "
@@ -7,7 +8,7 @@ def generate_response(user_request: str, analysis: str) -> str:
       "You can also contact the international office for guidance."
     )
   
-  if "grading" in analysis:
+  if "academic" in categories:
     return (
       "To understand the grading system, check your course "
       "syllabus for the assessment criteria, grading scale, "

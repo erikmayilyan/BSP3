@@ -1,0 +1,51 @@
+question,expected
+How do I apply for a bachelor's degree at the University of Luxembourg?,admissions|programmes
+What documents do I need to upload with my application?,admissions
+How does re-enrolment work for the next academic year?,admissions
+"I am a visiting student from another university, how can I enrol?",admissions
+Do I need a language certificate to apply?,admissions|language
+"Which master programmes does the Faculty of Science, Technology and Medicine offer?",programmes
+Is there a part-time option for the bachelor in psychology?,programmes
+What is the difference between the bachelor and master in computer science?,programmes
+Can I choose a minor outside my faculty?,programmes
+Where can I find the course catalogue for my programme?,programmes
+How much are the tuition fees per semester?,tuition
+Are there scholarships for international students?,tuition
+Can I pay my tuition fees in instalments?,tuition
+What financial support is available for students with children?,tuition
+When are the exams for the winter semester?,academic
+How are my grades converted after an exchange semester?,academic|mobility
+"What happens if I fail an exam, can I retake it?",academic
+How do I appeal a grade?,academic
+Where can I download my transcript?,academic
+How many ECTS credits is this course worth?,academic
+How do I apply for an Erasmus exchange?,admissions|mobility
+Which partner universities can I choose for my exchange?,mobility
+"I am an incoming exchange student, where is the welcome guide?",mobility
+Can I spend a semester abroad in my third year?,mobility
+What language courses does the Language Centre offer?,language
+Is there a French course for beginners?,language
+Do I need a TOEFL score to study in English?,language
+Can I take German classes while doing my master?,language|programmes
+Where can I get help with academic writing in English?,language
+How can I find student accommodation near the Kirchberg campus?,campus
+Is the library open on Sundays?,campus
+What sports activities can students join?,campus
+How do I join a student association?,campus
+Where can I get mental health support?,support
+Is there a career centre that helps with internships?,support
+"I have a disability, what support services are available?",support
+Is there peer support for first-year students?,support
+Can I get counselling for stress during exams?,support|academic
+What research areas does the university focus on?,research
+How do I find a PhD supervisor?,research
+Are there laboratory facilities for doctoral students?,research
+Can master students participate in research projects?,programmes|research
+Where are the university's publications listed?,research
+Who is the rector of the university?,organisation
+How do I get to the Belval campus by train?,campus
+What are the opening hours of the student administration?,organisation
+How can I contact the International Relations Office?,organisation
+How do I connect to the university Wi-Fi?,it
+"I forgot my Moodle password, how do I reset it?",it
+How do I set up my university email account?,it
