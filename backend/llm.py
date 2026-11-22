@@ -31,7 +31,11 @@ def send_request(url: str, payload: dict, headers: dict = None):
       if attempt == 1:
         raise
 
-def ask_llm(prompt: str, json_mode: bool = False) -> str | dict:
+def ask_llm(
+  prompt: str, 
+  json_mode: bool = False,
+  temperature: float | None = None
+) -> str | dict:
   if provider == "ollama":
     payload = {
       "model": ollama_model,
@@ -40,6 +44,8 @@ def ask_llm(prompt: str, json_mode: bool = False) -> str | dict:
     }
     if json_mode:
       payload["format"] = "json"
+    if temperature is not None:
+      payload["options"] = { "temperature": temperature }
     response = send_request(
       ollama_host + "/api/generate",
       payload
@@ -62,6 +68,8 @@ def ask_llm(prompt: str, json_mode: bool = False) -> str | dict:
     }
     if json_mode:
       payload["response_format"] = { "type": "json_object" }
+    if temperature is not None:
+      payload["temperature"] = temperature
     response = send_request(
       "https://api.openai.com/v1/chat/completions",
       payload,

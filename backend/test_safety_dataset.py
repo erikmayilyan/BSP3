@@ -1,8 +1,15 @@
 import csv
+import os
+import pytest
 from pathlib import Path
 from agents.prompt_safety_agent import check_prompt
 
 DATASET_PATH = Path(__file__).resolve().parents[1] / "data" / "requests.csv"
+
+@pytest.mark.skipif(
+  os.getenv("RUN_SAFETY_DATASET") != "1",
+  reason="Slow LLM dataset evaluation is disabled by default."
+)
 
 def test_safety_dataset():
   safe_passed = 0
